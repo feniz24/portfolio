@@ -1,0 +1,131 @@
+/* ===== Custom cursor (desktop only) ===== */
+@media (min-width: 768px) {
+    body { cursor: none; }
+    a, button, .hover-trigger { cursor: none; }
+}
+
+#cursor-dot,
+#cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 2147483647;
+    pointer-events: none;
+    display: none;
+    visibility: visible;
+}
+
+@media (min-width: 768px) {
+    #cursor-dot,
+    #cursor-outline { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #cursor-dot,
+    #cursor-outline { display: none !important; }
+    body, a, button, .hover-trigger { cursor: auto !important; }
+}
+
+#cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #6366f1;
+    box-shadow: 0 0 20px #6366f1, 0 0 40px rgba(99, 102, 241, 0.5);
+}
+
+#cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(99, 102, 241, 0.7);
+    transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+body.hovering #cursor-outline {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(99, 102, 241, 0.1);
+    border-color: #6366f1;
+    backdrop-filter: blur(2px);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+
+.cursor-blink { animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+/* ===== Modern Grid Background ===== */
+.bg-grid {
+    background-image:
+        linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+/* ===== Gradient Text Utility ===== */
+.text-gradient {
+    background: linear-gradient(to right, #6366f1, #0ea5e9, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ===== Accessibility & focus ===== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+a:focus-visible, button:focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+.nav-link.active { color: #f8fafc; }
+
+/* ===== Section reveal (respects reduced-motion via JS) ===== */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .section-reveal { opacity: 1; transform: none; }
+    .section-reveal.is-visible { opacity: 1; transform: none; }
+}
+
+/* ===== Back to top button ===== */
+#back-to-top { transition: opacity 0.3s, transform 0.3s; }
+#back-to-top[aria-hidden="true"] {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .cursor-blink { animation: none; opacity: 1; }
+}

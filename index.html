@@ -4,141 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thant Htet Oo | SOC Analyst & Cloud Engineer</title>
+    <meta name="description" content="Portfolio of Thant Htet Oo — SOC Analyst & Cloud Engineer. Securing cloud infrastructure with data intelligence. CKA, CKAD, Security+, AWS. Canterbury, UK.">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // "Midnight Enterprise" Palette
-                        pro: {
-                            bg: '#020617',     // Ultra Deep Slate
-                            card: '#0f172a',   // Slate 900
-                            primary: '#6366f1', // Indigo (Security Focus)
-                            secondary: '#0ea5e9', // Sky Blue (Cloud Focus)
-                            accent: '#ec4899',  // Pink/Rose (Data Focus)
-                            text: '#f8fafc',    // Slate 50
-                            muted: '#94a3b8'    // Slate 400
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    animation: {
-                        'blob': 'blob 12s infinite',
-                        'grid': 'grid 40s linear infinite',
-                        'twinkle': 'twinkle 5s ease-in-out infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        grid: {
-                            '0%': { backgroundPosition: '0 0' },
-                            '100%': { backgroundPosition: '40px 40px' },
-                        },
-                        twinkle: {
-                            '0%, 100%': { opacity: 0.3, transform: 'scale(1)' },
-                            '50%': { opacity: 1, transform: 'scale(1.2)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Hide Default Cursor (Desktop Only) */
-        @media (min-width: 768px) {
-            body { cursor: none; }
-            a, button, .hover-trigger { cursor: none; }
-        }
-
-        /* Custom Cursor Styles */
-        #cursor-dot, #cursor-outline {
-            position: fixed;
-            top: 0;
-            left: 0;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            z-index: 9999;
-            pointer-events: none;
-            display: none; 
-        }
-
-        @media (min-width: 768px) {
-            #cursor-dot, #cursor-outline { display: block; }
-        }
-
-        #cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #6366f1; /* Indigo */
-            box-shadow: 0 0 15px #6366f1;
-        }
-
-        #cursor-outline {
-            width: 40px;
-            height: 40px;
-            border: 1px solid rgba(99, 102, 241, 0.4);
-            transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
-        }
-
-        body.hovering #cursor-outline {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(99, 102, 241, 0.1);
-            border-color: #6366f1;
-            backdrop-filter: blur(2px);
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
-        
-        .cursor-blink { animation: blink 1s step-end infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
-
-        .animation-delay-2000 { animation-delay: 2s; }
-        .animation-delay-4000 { animation-delay: 4s; }
-
-        /* Modern Grid Background */
-        .bg-grid {
-            background-image: 
-                linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
-        }
-        
-        /* Gradient Text Utility */
-        .text-gradient {
-            background: linear-gradient(to right, #6366f1, #0ea5e9, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
 </head>
 <body class="bg-pro-bg text-pro-text font-sans antialiased selection:bg-pro-primary selection:text-white overflow-x-hidden relative">
 
-    <div id="cursor-dot"></div>
-    <div id="cursor-outline"></div>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-pro-primary focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-white">Skip to main content</a>
+
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="cursor-outline" aria-hidden="true"></div>
 
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div class="absolute inset-0 bg-grid animate-grid"></div>
@@ -152,27 +32,27 @@
     <nav class="fixed w-full z-50 bg-pro-bg/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex items-center">
-                    <span class="font-mono text-xl font-bold tracking-tighter hover-trigger">
+                <a href="#" class="flex items-center hover-trigger" aria-label="Home">
+                    <span class="font-mono text-xl font-bold tracking-tighter">
                         <span class="text-pro-primary">&lt;</span>Thant.Sec<span class="text-pro-primary">/&gt;</span>
                     </span>
-                </div>
+                </a>
                 
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="hover-trigger text-pro-muted hover:text-white text-sm font-medium transition duration-300">About</a>
-                        <a href="#skills" class="hover-trigger text-pro-muted hover:text-white text-sm font-medium transition duration-300">Skills</a>
-                        <a href="#projects" class="hover-trigger text-pro-muted hover:text-white text-sm font-medium transition duration-300">Projects</a>
-                        <a href="#timeline" class="hover-trigger text-pro-muted hover:text-white text-sm font-medium transition duration-300">Certifications</a>
-                        <a href="https://drive.google.com/file/d/1nSvTNkIDrEb0-msPwx8AN6ozyvupBF3w/view?usp=sharing" class="hover-trigger bg-white/10 border border-white/10 text-white px-5 py-2 rounded-full font-medium hover:bg-pro-primary hover:border-pro-primary transition duration-300 flex items-center">
+                        <a href="#about" class="nav-link hover-trigger text-pro-muted hover:text-white text-sm font-medium transition duration-300">About</a>
+                        <a href="#skills" class="nav-link hover-trigger text-pro-muted hover:text-white text-sm font-medium transition duration-300">Skills</a>
+                        <a href="#projects" class="nav-link hover-trigger text-pro-muted hover:text-white text-sm font-medium transition duration-300">Projects</a>
+                        <a href="#timeline" class="nav-link hover-trigger text-pro-muted hover:text-white text-sm font-medium transition duration-300">Certifications</a>
+                        <a href="https://drive.google.com/file/d/1nSvTNkIDrEb0-msPwx8AN6ozyvupBF3w/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover-trigger bg-white/10 border border-white/10 text-white px-5 py-2 rounded-full font-medium hover:bg-pro-primary hover:border-pro-primary transition duration-300 flex items-center">
                             Download CV <i class="fas fa-arrow-down ml-2 text-xs"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-pro-primary focus:outline-none p-2">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" class="text-white hover:text-pro-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-pro-primary focus-visible:ring-offset-2 focus-visible:ring-offset-pro-bg p-2 rounded-lg">
+                        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -184,12 +64,13 @@
                 <a href="#skills" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-pro-muted hover:text-white hover:bg-white/5">Skills</a>
                 <a href="#projects" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-pro-muted hover:text-white hover:bg-white/5">Projects</a>
                 <a href="#timeline" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-pro-muted hover:text-white hover:bg-white/5">Certifications</a>
-                <a href="#" class="mobile-link block px-3 py-3 rounded-md text-base font-bold text-pro-primary hover:bg-pro-primary/10">Download CV</a>
+                <a href="https://drive.google.com/file/d/1nSvTNkIDrEb0-msPwx8AN6ozyvupBF3w/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="mobile-link block px-3 py-3 rounded-md text-base font-bold text-pro-primary hover:bg-pro-primary/10">Download CV</a>
             </div>
         </div>
+
     </nav>
 
-    <div class="relative z-10">
+    <main id="main-content" class="relative z-10">
 
         <section class="min-h-screen flex items-center justify-center relative pt-16">
             <div class="max-w-5xl mx-auto px-4 text-center">
@@ -222,14 +103,14 @@
                     <a href="#projects" class="hover-trigger px-8 py-3.5 bg-pro-primary text-white font-bold rounded-lg hover:bg-indigo-500 transition shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transform hover:-translate-y-1">
                         View Portfolio
                     </a>
-                    <a href="https://github.com/feniz24" target="_blank" class="hover-trigger px-8 py-3.5 bg-white/5 border border-white/10 text-white font-bold rounded-lg hover:bg-white/10 hover:border-white/30 transition flex items-center justify-center gap-2 transform hover:-translate-y-1">
-                        <i class="fab fa-github"></i> GitHub
+                    <a href="https://github.com/feniz24" target="_blank" rel="noopener noreferrer" class="hover-trigger px-8 py-3.5 bg-white/5 border border-white/10 text-white font-bold rounded-lg hover:bg-white/10 hover:border-white/30 transition flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                        <i class="fab fa-github" aria-hidden="true"></i> GitHub
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-24">
+        <section id="about" class="section-reveal py-24">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The Hybrid Profile</h2>
@@ -270,7 +151,7 @@
             </div>
         </section>
 
-        <section id="skills" class="py-24 relative">
+        <section id="skills" class="section-reveal py-24 relative">
             <div class="max-w-5xl mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">Technical Arsenal</h2>
                 
@@ -312,7 +193,7 @@
             </div>
         </section>
 
-        <section id="projects" class="py-24">
+        <section id="projects" class="section-reveal py-24">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Practical Experience</h2>
                 
@@ -331,7 +212,7 @@
                             <p class="text-pro-muted text-sm leading-relaxed mb-6">
                                 Deployed a home lab environment simulating corporate network attacks. Configured Wazuh for FIM and Splunk for log ingestion, successfully detecting brute-force attempts.
                             </p>
-                            <a href="https://github.com/feniz24" class="text-pro-primary text-sm font-bold hover:text-white transition flex items-center">View on GitHub <i class="fas fa-arrow-right ml-2"></i></a>
+                            <span class="text-pro-muted text-sm font-medium flex items-center opacity-60"><i class="fab fa-github mr-2"></i>View on GitHub (coming soon)</span>
                         </div>
                     </div>
 
@@ -348,7 +229,7 @@
                             <p class="text-pro-muted text-sm leading-relaxed mb-6">
                                 Architected secure AWS VPCs with public/private subnets. Implemented Infrastructure as Code (IaC) using Terraform and applied strict IAM policies.
                             </p>
-                            <a href="https://github.com/feniz24" class="text-pro-secondary text-sm font-bold hover:text-white transition flex items-center">View on GitHub <i class="fas fa-arrow-right ml-2"></i></a>
+                            <span class="text-pro-muted text-sm font-medium flex items-center opacity-60"><i class="fab fa-github mr-2"></i>View on GitHub (coming soon)</span>
                         </div>
                     </div>
 
@@ -365,13 +246,22 @@
                             <p class="text-pro-muted text-sm leading-relaxed mb-6">
                                 Developed a semantic segmentation model to distinguish between 'Cat' and 'Dog' pixels. Implemented encoder-decoder architectures for precise object masking.
                             </p>
-                            <a href="https://github.com/feniz24/image_seg_cat_dog" target="_blank" class="text-pro-accent text-sm font-bold hover:text-white transition flex items-center">View on GitHub <i class="fas fa-arrow-right ml-2"></i></a>
+                            <a href="https://github.com/feniz24/image_seg_cat_dog" target="_blank" rel="noopener noreferrer" class="text-pro-accent text-sm font-bold hover:text-white transition flex items-center">View on GitHub <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
                     <div class="hover-trigger bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-red-500/50 transition duration-300 shadow-xl group flex flex-col h-full">
-                        <div class="h-52 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center border-b border-white/5 group-hover:bg-gray-800/80 transition">
-                            <i class="fas fa-flag text-7xl text-white/20 group-hover:text-red-500 group-hover:scale-110 transition duration-300"></i>
+                        <div class="h-52 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+                            <div id="thm-flag-logo" class="absolute inset-0 flex items-center justify-center transition duration-300">
+                                <i class="fas fa-flag text-7xl text-white/20 group-hover:text-red-500 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div id="thm-badge-logo" class="absolute inset-0 flex items-center justify-center p-4 hidden">
+                                <div id="thm-badge-loading" class="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-gray-800 to-gray-900">
+                                    <span class="text-pro-muted text-sm">Loading badge…</span>
+                                    <div class="w-12 h-3 bg-white/10 rounded-full animate-pulse"></div>
+                                </div>
+                                <iframe id="thm-badge-iframe" data-src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3125797" style="border:none; min-height:100px; height:120px; width:100%; max-width:280px; opacity:0; transition: opacity 0.3s ease;" title="TryHackMe profile badge"></iframe>
+                            </div>
                         </div>
                         <div class="p-8 flex flex-col flex-grow">
                             <div class="flex gap-2 mb-4">
@@ -382,10 +272,11 @@
                             <p class="text-pro-muted text-sm leading-relaxed mb-6">
                                 Ranked in the top 2% globally. Completed 100+ labs covering privilege escalation, web app vulnerabilities, and network defense.
                             </p>
-                            <div class="mt-auto">
-                                <a href="https://tryhackme.com/p/feniz24" target="_blank" class="text-red-500 text-sm font-bold hover:text-white transition flex items-center">
-                                    View Full Profile <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
+                            <div class="mt-auto flex flex-wrap items-center gap-3">
+                                <button type="button" id="thm-view-badge" aria-label="Toggle TryHackMe badge in card" class="hover-trigger text-red-500 text-sm font-bold hover:text-white transition flex items-center">
+                                    View badge <i class="fas fa-medal ml-2" aria-hidden="true"></i>
+                                </button>
+                                <a href="https://tryhackme.com/p/feniz24" target="_blank" rel="noopener noreferrer" class="text-red-500/80 text-sm hover:text-red-500 transition inline-flex items-center">View profile <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -394,29 +285,23 @@
             </div>
         </section>
 
-        <section id="timeline" class="py-24 relative">
+        <section id="timeline" class="section-reveal py-24 relative">
             <div class="max-w-4xl mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-16">Certification Roadmap</h2>
                 
                 <div class="relative border-l border-white/10 ml-6 space-y-12">
                     
                     <div class="ml-10 relative">
-                        <span class="absolute -left-[45px] top-1 h-5 w-5 rounded-full border-2 border-yellow-500 bg-pro-bg"></span>
-                        <h3 class="text-2xl font-bold text-yellow-500 mb-4">Scheduled for 2026</h3>
-                        <div class="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-yellow-500/30 transition">
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <p class="text-white font-semibold">CKA & CKAD</p>
-                                    <p class="text-pro-muted text-sm">Kubernetes Admin/Dev</p>
-                                </div>
-                                <div>
-                                    <p class="text-white font-semibold">Terraform Associate</p>
-                                    <p class="text-pro-muted text-sm">Infrastructure as Code</p>
-                                </div>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-white/10">
+                        <span class="absolute -left-[45px] top-1 h-5 w-5 rounded-full border-2 border-pro-primary bg-pro-primary shadow-[0_0_15px_#6366f1]"></span>
+                        <h3 class="text-2xl font-bold text-pro-primary mb-4">2026</h3>
+                        <div class="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10">
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex items-center text-white"><i class="fas fa-check-circle text-pro-primary mr-3"></i> CKA (Certified Kubernetes Administrator)</li>
+                                <li class="flex items-center text-white"><i class="fas fa-check-circle text-pro-primary mr-3"></i> CKAD (Certified Kubernetes Application Developer)</li>
+                            </ul>
+                            <div class="pt-4 border-t border-white/10">
                                 <p class="text-pro-primary font-semibold flex items-center">
-                                    <i class="fas fa-shield-halved mr-2"></i>Blue Team Level 1 (BTL1)
+                                    <i class="fas fa-book-open mr-2"></i>Currently learning: Blue Team Level 1 (BTL1)
                                 </p>
                             </div>
                         </div>
@@ -459,128 +344,30 @@
                     <p class="text-pro-muted text-xs mt-1">Canterbury, UK</p>
                 </div>
                 <div class="flex space-x-8">
-                    <a href="https://github.com/feniz24" class="hover-trigger text-pro-muted hover:text-white text-2xl transition transform hover:scale-110"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/thanthtetoo" class="hover-trigger text-pro-muted hover:text-pro-primary text-2xl transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:thanthtetoo@gmail.com" class="hover-trigger text-pro-muted hover:text-pro-accent text-2xl transition transform hover:scale-110"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/feniz24" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover-trigger text-pro-muted hover:text-white text-2xl transition transform hover:scale-110"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="https://linkedin.com/in/thanthtetoo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover-trigger text-pro-muted hover:text-pro-primary text-2xl transition transform hover:scale-110"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="mailto:thanthtetoo@gmail.com" aria-label="Email" class="hover-trigger text-pro-muted hover:text-pro-accent text-2xl transition transform hover:scale-110"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="text-center mt-10 text-pro-muted text-xs">
-                &copy; 2025 Thant Htet Oo. Designed with Tailwind CSS & Glassmorphism.
+                &copy; 2026 Thant Htet Oo. Designed with Tailwind CSS & Glassmorphism.
             </div>
         </footer>
 
-    </div>
+        <a href="#" id="back-to-top" aria-label="Back to top" aria-hidden="true" class="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-pro-primary text-white flex items-center justify-center shadow-lg hover:bg-indigo-500 hover:scale-110 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-pro-bg">
+            <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        </a>
 
-    <script>
-        // --- MOBILE MENU LOGIC ---
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const links = document.querySelectorAll('.mobile-link');
-        const icon = btn.querySelector('i');
+    </main>
 
-        // Toggle Menu
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        });
-
-        // Close menu when a link is clicked
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-
-        // --- CUSTOM CURSOR ---
-        // (Only active on desktop via CSS media query)
-        const cursorDot = document.getElementById('cursor-dot');
-        const cursorOutline = document.getElementById('cursor-outline');
-
-        window.addEventListener('mousemove', function(e) {
-            const posX = e.clientX;
-            const posY = e.clientY;
-
-            // Only update if elements are visible
-            if (window.getComputedStyle(cursorDot).display !== 'none') {
-                cursorDot.style.left = `${posX}px`;
-                cursorDot.style.top = `${posY}px`;
-
-                cursorOutline.animate({
-                    left: `${posX}px`,
-                    top: `${posY}px`
-                }, { duration: 400, fill: "forwards" });
-            }
-        });
-
-        const hoverTriggers = document.querySelectorAll('.hover-trigger, a, button');
-        hoverTriggers.forEach(trigger => {
-            trigger.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
-            trigger.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
-        });
-
-        // --- TYPEWRITER ---
-        const textElement = document.getElementById('typewriter');
-        const lines = [
-            "> Initializing SOC Environment...",
-            "> User: Thant Htet Oo @ Feniz",
-            "> Role: Junior SOC Analyst",
-            "> Education: MSc Cyber Security",
-            "> Status: Ready to Deploy..."
-        ];
-        
-        let lineIndex = 0;
-        let charIndex = 0;
-
-        function typeWriter() {
-            if (lineIndex < lines.length) {
-                if (charIndex < lines[lineIndex].length) {
-                    let content = "";
-                    for(let i=0; i<lineIndex; i++) {
-                        content += lines[i] + "<br>";
-                    }
-                    content += lines[lineIndex].substring(0, charIndex + 1);
-                    content += '<span class="cursor-blink">_</span>';
-                    textElement.innerHTML = content;
-                    charIndex++;
-                    setTimeout(typeWriter, 30);
-                } else {
-                    lineIndex++;
-                    charIndex = 0;
-                    setTimeout(typeWriter, 500);
-                }
-            }
-        }
-        window.onload = typeWriter;
-
-        // --- TABS ---
-        function switchTab(tabName) {
-            document.querySelectorAll('.skill-content').forEach(el => el.classList.add('hidden'));
-            document.getElementById('content-' + tabName).classList.remove('hidden');
-            document.getElementById('content-' + tabName).classList.add('grid');
-
-            // Reset buttons
-            const buttons = document.querySelectorAll('button[id^="tab-"]');
-            buttons.forEach(btn => {
-                btn.className = "hover-trigger px-6 py-2 rounded-full font-medium text-sm text-pro-muted hover:text-white transition-all duration-300";
-            });
-
-            // Highlight active
-            const activeBtn = document.getElementById('tab-' + tabName);
-            let activeColor = 'bg-pro-primary text-white shadow-lg'; 
-            if(tabName === 'cloud') activeColor = 'bg-pro-secondary text-white shadow-lg';
-            if(tabName === 'data') activeColor = 'bg-pro-accent text-white shadow-lg';
-            
-            activeBtn.className = `hover-trigger px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 ${activeColor}`;
-        }
-    </script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/nav-scroll.js"></script>
+    <script src="js/back-to-top.js"></script>
+    <script src="js/section-reveal.js"></script>
+    <script src="js/tryhackme.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script src="js/tabs.js"></script>
 </body>
 
 </html>
