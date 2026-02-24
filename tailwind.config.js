@@ -23,6 +23,8 @@ module.exports = {
         grid: 'grid 40s linear infinite',
         twinkle: 'twinkle 5s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
+        scanlines: 'scanlines 8s linear infinite',
+        particles: 'particles 20s linear infinite',
       },
       keyframes: {
         blob: {
@@ -42,6 +44,14 @@ module.exports = {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        scanlines: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100%)' },
+        },
+        particles: {
+          '0%': { transform: 'translateY(0) rotate(0deg)' },
+          '100%': { transform: 'translateY(-1000px) rotate(360deg)' },
         },
       },
     },
