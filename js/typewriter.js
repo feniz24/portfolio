@@ -6,7 +6,7 @@
     const lines = [
         '> Initializing SOC Environment...',
         '> User: Thant Htet Oo @ Feniz',
-        '> Role: Junior SOC Analyst',
+        '> Role: Security Engineer',
         '> Education: MSc Cyber Security',
         '> Status: Ready to Deploy...'
     ];
